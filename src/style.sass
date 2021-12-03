@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+
+$linear-1: linear-gradient( #3780d3, #ee5cf3)
+$linear-1r: linear-gradient(to right, #3780d3, #ee5cf3)
+$linear-2: linear-gradient(#080808, #3f1c39)
+$linear-3: linear-gradient(#5900ff, #ff00ff)
+
+$light: #f1efef
+
+    
+* 
+    font-family: 'Poppins', sans-serif
+
+body
+    background-image: $linear-2
+    min-height: 100vh
+
+.articles
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 50px
+    padding: 100px 0
+
+    .Article
+        // background-image: $linear-1
+        width: 300px
+        height: 350px
+        border-radius: 20px
+        overflow: hidden
+        position: relative
+
+        &:hover
+            .rect
+                bottom: 0
+                
+
+        .img     
+            top: 0
+            height: 200px
+
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                border-radius: 20px 20px 0 0
+        
+        .rect
+            color: #f1efef
+            bottom: -55%
+            position: absolute
+            justify-content: center
+            background-image: $linear-1
+            height: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            transition-property: all
+            transition-duration: 1s
+            transition-timing-function: ease-in-out
+            
+            h3
+                font-family: 'Fuzzy Bubbles', cursive;
+                text-transform: uppercase
+                font-weight: 600
+                font-size: 2.5em
+                margin: 24px 0
+                
+            button
+                width: 80%
+                padding: 10px
+                border-radius: 20px
+                border: none
+                background-color: #f1efef49
+                font-size: 1.2em
+                color: $light
+                font-weight: 600
+                transition-duration: .3s
+                margin-bottom: 20px
+                transition-duration: 1s
+
+                &:hover
+                    background-color: #790b8a
+
+
+nav
+    background-image: $linear-1r
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    color: $light
+    align-items: center
+    padding: 10px 5%
+    
+    .logo
+        font-size: 2.5em
+        font-family: 'Fuzzy Bubbles'
+        font-weight: 600
+    
+    ul
+        display: flex
+        flex-wrap: wrap
+        list-style: none
+        gap: 30px
+
+        a
+            color: $light
+            text-decoration: none
+            transition-duration: .2s
+
+            &:hover
+                background: $linear-3
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+        .counter
+            width: 30px
+            height: 30px
+            display: flex
+            justify-content: center
+            align-items: center
+            font-weight: 600
+            background-image: $linear-3
+            border-radius: 50%
