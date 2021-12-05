@@ -7,6 +7,7 @@ $linear-2: linear-gradient(#080808, #3f1c39)
 $linear-3: linear-gradient(#5900ff, #ff00ff)
 
 $light: #f1efef
+$blue-1: #5900ff
 
     
 * 
@@ -57,7 +58,7 @@ body
             flex-direction: column
             align-items: center
             transition-property: all
-            transition-duration: 1s
+            transition-duration: .6s
             transition-timing-function: ease-in-out
             
             h3
@@ -123,3 +124,85 @@ nav
             font-weight: 600
             background-image: $linear-3
             border-radius: 50%
+
+
+
+
+.app
+    position: relative
+
+
+.chosenArticles
+    position: fixed
+    top: 150px
+    right: 0
+    background-image: $linear-3
+    width: 400px
+    max-height: 500px
+    min-height: 150px
+    z-index: 100
+    display: flex
+    flex-direction: column
+    padding-top: 20px
+    align-items: center
+    overflow-y: scroll
+    gap: 20px
+    border-radius: 20px
+    padding: 20px 0
+    scroll-behavior: smooth
+
+    // &::before
+    //     content: ''
+    //     position: absolute
+    //     top: -40px
+    //     right: 30%
+    //     width: 0
+    //     height: 0
+    //     border: 20px solid transparent
+    //     border-bottom: 20px solid #fff
+    //     z-index: 101
+
+    .chosenArticle
+        width: 95%
+        height: 100px
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 20px
+        color: $light
+        border-radius: 20px
+        background-color: #ffffff2d
+
+        .img
+            width: 20%
+            border-radius: 50%            
+
+            img
+                width: 100%
+                border-radius: 50%  
+
+        h4 
+            font-family: 'Fuzzy Bubbles'
+            font-size: 1.5em
+            border-bottom: 5px dashed $light
+
+        p  
+            font-size: 1.2em
+
+        button 
+            background-image: $linear-1
+            border: none
+            width: 40px
+            height: 40px
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 50%
+            
+            i
+                padding: 10px
+                color: $light
+
+
+
+        

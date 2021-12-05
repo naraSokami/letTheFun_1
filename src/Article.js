@@ -2,6 +2,7 @@ import React from 'react';
 
 
 const Article = (props) => {
+    // console.log(props)
 
     return (
         <div className="Article">
@@ -11,7 +12,7 @@ const Article = (props) => {
             <div className="rect">
                 <h3>{props.title}</h3>
                 <p className="desc">{props.desc}</p>
-                <button className="price" onClick={props.handleClick}>{props.price} $</button>
+                <button className="price" id={'_' + props.id} onClick={props.handleClick}>{props.price} $</button>
             </div>
         </div>
     )

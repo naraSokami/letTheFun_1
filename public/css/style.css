@@ -70,8 +70,8 @@ body {
           align-items: center;
   -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
+  -webkit-transition-duration: .6s;
+          transition-duration: .6s;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
 }
@@ -168,5 +168,98 @@ nav ul .counter {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#5900ff), to(#ff00ff));
   background-image: linear-gradient(#5900ff, #ff00ff);
   border-radius: 50%;
+}
+
+.app {
+  position: relative;
+}
+
+.chosenArticles {
+  position: fixed;
+  top: 150px;
+  right: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5900ff), to(#ff00ff));
+  background-image: linear-gradient(#5900ff, #ff00ff);
+  width: 400px;
+  max-height: 500px;
+  min-height: 150px;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-y: scroll;
+  gap: 20px;
+  border-radius: 20px;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+}
+
+.chosenArticles .chosenArticle {
+  width: 95%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  color: #f1efef;
+  border-radius: 20px;
+  background-color: #ffffff2d;
+}
+
+.chosenArticles .chosenArticle .img {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.chosenArticles .chosenArticle .img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.chosenArticles .chosenArticle h4 {
+  font-family: 'Fuzzy Bubbles';
+  font-size: 1.5em;
+  border-bottom: 5px dashed #f1efef;
+}
+
+.chosenArticles .chosenArticle p {
+  font-size: 1.2em;
+}
+
+.chosenArticles .chosenArticle button {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3780d3), to(#ee5cf3));
+  background-image: linear-gradient(#3780d3, #ee5cf3);
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+}
+
+.chosenArticles .chosenArticle button i {
+  padding: 10px;
+  color: #f1efef;
 }
 /*# sourceMappingURL=style.css.map */
