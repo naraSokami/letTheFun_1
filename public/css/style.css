@@ -200,6 +200,14 @@ nav ul .counter {
   border-radius: 20px;
   padding: 20px 0;
   scroll-behavior: smooth;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.chosenArticles > i {
+  color: #f1efef;
+  font-size: 2em;
+  display: none;
 }
 
 .chosenArticles .chosenArticle {
@@ -261,5 +269,49 @@ nav ul .counter {
 .chosenArticles .chosenArticle button i {
   padding: 10px;
   color: #f1efef;
+}
+
+.nonExpanded {
+  width: 80px;
+  min-height: 80px;
+  overflow-y: hidden;
+  padding: 0;
+  right: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  -webkit-animation: shoppingBagAnimation 2s ease-in infinite alternate;
+          animation: shoppingBagAnimation 2s ease-in infinite alternate;
+}
+
+.nonExpanded .chosenArticle {
+  display: none;
+}
+
+.nonExpanded i {
+  display: inline-block;
+}
+
+@-webkit-keyframes shoppingBagAnimation {
+  from {
+    -webkit-box-shadow: 0 0 0 0 #e732ff28;
+            box-shadow: 0 0 0 0 #e732ff28;
+  }
+  to {
+    -webkit-box-shadow: 0 0 2px 40px #e732ff28, 0 0 2px 30px #e732ff3a, 0 0 2px 20px #e732ff3a, 0 0 2px 10px #e732ff73;
+            box-shadow: 0 0 2px 40px #e732ff28, 0 0 2px 30px #e732ff3a, 0 0 2px 20px #e732ff3a, 0 0 2px 10px #e732ff73;
+  }
+}
+
+@keyframes shoppingBagAnimation {
+  from {
+    -webkit-box-shadow: 0 0 0 0 #e732ff28;
+            box-shadow: 0 0 0 0 #e732ff28;
+  }
+  to {
+    -webkit-box-shadow: 0 0 2px 40px #e732ff28, 0 0 2px 30px #e732ff3a, 0 0 2px 20px #e732ff3a, 0 0 2px 10px #e732ff73;
+            box-shadow: 0 0 2px 40px #e732ff28, 0 0 2px 30px #e732ff3a, 0 0 2px 20px #e732ff3a, 0 0 2px 10px #e732ff73;
+  }
 }
 /*# sourceMappingURL=style.css.map */

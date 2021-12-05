@@ -59,8 +59,9 @@ class App extends React.Component {
 	}
 
 
-	handleDelete({ target }) {
-		const chosenArticle = target.parentElement.parentElement;
+	handleDelete(event) {
+		event.stopPropagation();
+		const chosenArticle = event.target.parentElement.parentElement;
 		console.log(chosenArticle);
 		const returnId = chosenArticle.getAttribute('returnId');
 		this.setState({ buy: this.state.buy -= chosenArticle.getAttribute('price'),
