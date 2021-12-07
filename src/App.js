@@ -69,9 +69,6 @@ class App extends React.Component {
 							return returnId != article.returnId; 
 						}), counter: this.state.counter -= 1});	
 		console.log(this.state.chosenArticles)
-
-
-		// chosenArticle.remove()
 	}
 
 
